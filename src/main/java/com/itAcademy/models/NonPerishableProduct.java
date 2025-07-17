@@ -8,6 +8,10 @@ public class NonPerishableProduct extends Product {
 
     public double applyDiscount(double discount, String message) {
 
+        System.out.println(message);
+
+        double discountedPrice = getPrice() * (1 - discount / 100.0);
+
         /*Product p.setPrice();
 
         if(p instanceof NonPerishableProduct){
@@ -15,6 +19,6 @@ public class NonPerishableProduct extends Product {
         }
 
     }*/
-        return discount;
+        return discountedPrice;
     }
 }
