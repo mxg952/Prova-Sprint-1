@@ -28,7 +28,6 @@ public class InventoryManager {
         }
 
         products.add(product);
-
     }
 
     public Product findByName(String productName) throws ProductNotFoundException {
@@ -53,5 +52,6 @@ public class InventoryManager {
                 .mapToDouble(p -> p.getPrice() * p.getQuantity())
                 .sum();
     }
+
 
 }

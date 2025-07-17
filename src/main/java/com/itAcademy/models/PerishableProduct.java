@@ -3,7 +3,7 @@ package com.itAcademy.models;
 import java.time.LocalDate;
 import java.util.Date;
 
-public class PerishableProduct extends Product {
+public class PerishableProduct extends Product implements Discount {
 
     private LocalDate expirationDate;
 
@@ -26,6 +26,12 @@ public class PerishableProduct extends Product {
         }
     }
 
+    @Override
+    public double applyDiscount(double discount, String message) {
+        System.out.println(message);
 
+        double extraDiscount = getPrice() * 0.02;
+        return getPrice() - discount - extraDiscount;
+    }
 
 }

@@ -1,12 +1,12 @@
 package com.itAcademy.models;
 
-public class NonPerishableProduct extends Product {
+public class NonPerishableProduct extends Product implements Discount {
 
     public NonPerishableProduct(String name, double price, int quantity) {
         super(name, price, quantity);
     }
 
-    public double applyDiscount(double discount, String message) {
+   /* public double applyDiscount(double discount, String message) {
 
         System.out.println(message);
 
@@ -18,7 +18,15 @@ public class NonPerishableProduct extends Product {
             String resposta = System.out.println(message);
         }
 
-    }*/
-        return discountedPrice;
     }
+        return discountedPrice;
+    }*/
+
+
+    @Override
+    public double applyDiscount(double discount, String message) {
+        System.out.println(message);
+        return getPrice() - (getPrice() * discount / 100.0);
+    }
+
 }
