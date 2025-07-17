@@ -6,14 +6,15 @@ public class NonPerishableProduct extends Product {
         super(name, price, quantity);
     }
 
-    public String applyDiscount(double discount, String message) {
+    public double applyDiscount(double discount, String message) {
 
-        Product p.setPrice();
+        /*Product p.setPrice();
 
         if(p instanceof NonPerishableProduct){
             String resposta = System.out.println(message);
         }
 
+    }*/
+        return discount;
     }
-
 }
